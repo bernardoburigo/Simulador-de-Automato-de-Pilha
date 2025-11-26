@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simulador de Autômato de Pilha (AP)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>Simulador de Autômato de Pilha – GLC → AP</h1>
+
+        <h2>Alunos Participantes:</h2>
+        <ul>
+            <li>Bernardo Goulart Búrigo</li>
+            <li>Bruno Pereira Baldessar</li>
+            <li>Bruno Souza</li>
+            <li>Gabriel Waltrick</li>
+            <li>João Paulo Mizejeski</li>
+            <li>João Vitor Louenço</li>
+            <li>Luiz Fernando Ferreira</li>
+            <li>Victor Antônio Pereira</li>
+            <li>Vinicius Cittadin</li>
+            <li>Viktor Raulino Boeng</li>
+        </ul>
+
+        <h2>Gramática Utilizada</h2>
+        <ul>
+            <li>S → aD | cC</li>
+            <li>C → c</li>
+            <li>B → b</li>
+            <li>D → aDB | cCB</li>
+        </ul>
+
+        <h2>Exemplos</h2>
+        <ul>
+            <li><strong>Exemplo aceito:</strong> aaaccbbb</li>
+            <li><strong>Exemplo aceito:</strong> cc</li>
+            <li><strong>Exemplo rejeitado:</strong> abc</li>
+            <li><strong>Exemplo rejeitado:</strong> ababab</li>
+        </ul>
+
+        <hr />
+
+        <label>Digite a palavra: </label>
+        <input id="inputWord" placeholder="Ex: aaaccbbb">
+        <button>Simular</button>
+
+        <h2>Resultado: <span id="result"></span></h2>
+
+        <table id="stepsTable">
+            <thead>
+                <tr>
+                    <th>Passo</th>
+                    <th>Estado</th>
+                    <th>Entrada Restante</th>
+                    <th>Pilha (base → topo)</th>
+                    <th>Transição Aplicada</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script src="simulador.js"></script>
+    </body>
+</html>
